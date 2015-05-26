@@ -1,0 +1,42 @@
+{
+  "name": "react-d3-integration",
+  "version": "0.1.0",
+  "description": "An example integration between React and D3",
+  "private": true,
+  "main": "src/index.html",
+  "author": "Springload",
+  "license": "ISC",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint . && jscs .",
+    "start": "gulp watch",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/springload/react-d3-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/springload/react-d3-integration/issues"
+  },
+  "homepage": "https://github.com/springload/react-d3-integration",
+  "engines": {
+    "node": "0.12"
+  },
+  "dependencies": {
+    "d3": "^3.5.5",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "browser-sync": "^2.7.4",
+    "browserify": "^10.1.3",
+    "browserify-incremental": "^3.0.0",
+    "gulp": "^3.8.11",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "reactify": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
