@@ -36,7 +36,7 @@ git push origin master
 # Then push the new changes
 git checkout gh-pages
 git merge master
-npm run build
+export NODE_ENV=production; npm run build
 git add .
 git commit -m 'Release new version'
 git push origin gh-pages
