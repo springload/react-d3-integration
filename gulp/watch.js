@@ -10,10 +10,10 @@ gulp.task('watch', ['js'], function() {
     browserSync({
         notify: false,
         server: {
-            baseDir: [config.paths.webroot]
+            baseDir: [config.paths.root]
         }
     });
 
-    gulp.watch(path.join(config.paths.webroot, 'index.html'), reload);
+    gulp.watch(path.join(config.paths.root, 'index.html'), reload);
     gulp.watch(path.join(config.paths.js, '**', '*.js'), ['js']);
 });

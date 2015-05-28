@@ -33,7 +33,7 @@ gulp.task('js', function(done) {
         .pipe(source('bundle.js'))
         .pipe(bufferify())
         .pipe(process.env.NODE_ENV === 'production' ? uglify() : gutil.noop())
-        .pipe(gulp.dest(config.paths.webroot))
+        .pipe(gulp.dest(config.paths.assets))
         .on('end', done)
         .pipe(reload({stream: true}));
 });

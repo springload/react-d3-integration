@@ -10,7 +10,7 @@ module.exports = {
     paths: {
         root: rootPath,
         js: path.join(appPath, 'js'),
-        webroot: path.join(rootPath, 'public')
+        assets: path.join(rootPath, 'public')
     }
 
 };
