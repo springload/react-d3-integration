@@ -1,6 +1,8 @@
 react-d3-integration
 ==============
 
+> An example on how to integrate D3 into React.
+
 >[Demo site](https://springload.github.io/react-d3-integration/)
 
 ## Installation

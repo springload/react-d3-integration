@@ -1,7 +1,7 @@
 {
   "name": "react-d3-integration",
   "version": "0.1.0",
-  "description": "An example integration between React and D3",
+  "description": "An example on how to integrate D3 into React",
   "private": true,
   "main": "src/index.html",
   "author": "Springload",
