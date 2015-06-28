@@ -17,6 +17,7 @@ Other approaches worth having a look at:
 
 - https://ericbullington.com/blog/2014/11/16/react-d3-charts/
 - https://github.com/codesuki/react-d3-components
+- https://github.com/bgrsquared/d3-react-squared
 
 ## Installation
 
