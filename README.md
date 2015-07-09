@@ -69,3 +69,5 @@ npm install -g disc
 discify public/bundle.js > disc-report.html
 # Voilà! Open the file in your browser.
 ```
+
+Here's an [example report](https://springload.github.io/react-d3-integration/disc-report.html) for this repository.
