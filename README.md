@@ -59,3 +59,13 @@ git push origin gh-pages
 # And get back to master!
 git checkout master
 ```
+
+## Other tools
+
+### [Disc](http://hughsk.io/disc/)
+
+```sh
+npm install -g disc
+discify public/bundle.js > disc-report.html
+# Voilà! Open the file in your browser.
+```
