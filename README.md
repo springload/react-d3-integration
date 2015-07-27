@@ -71,3 +71,13 @@ discify public/bundle.js > disc-report.html
 ```
 
 Here's an [example report](https://springload.github.io/react-d3-integration/disc-report.html) for this repository.
+
+## [sitespeed.io](https://github.com/sitespeedio/sitespeed.io)
+
+```sh
+npm install -g sitespeed.io
+sitespeed.io -u https://springload.github.io/react-d3-integration/
+# You can now open the report that has been generated in sitespeed-result/.
+```
+
+This is an [example report](https://springload.github.io/react-d3-integration/sitespeed-result/springload.github.io/2015-07-27-12-38-44/) for this repository.
