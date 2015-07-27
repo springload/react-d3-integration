@@ -72,7 +72,7 @@ discify public/bundle.js > disc-report.html
 
 Here's an [example report](https://springload.github.io/react-d3-integration/disc-report.html) for this repository.
 
-## [sitespeed.io](https://github.com/sitespeedio/sitespeed.io)
+### [sitespeed.io](https://github.com/sitespeedio/sitespeed.io)
 
 ```sh
 npm install -g sitespeed.io
