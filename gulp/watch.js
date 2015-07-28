@@ -1,10 +1,9 @@
-'use strict';
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import path from 'path';
+import config from './config';
 
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var config = require('./config');
-var path = require('path');
-var reload = browserSync.reload;
+const reload = browserSync.reload;
 
 gulp.task('watch', ['js'], function() {
     browserSync({

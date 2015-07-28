@@ -1,25 +1,25 @@
 'use strict';
 
-var gulp = require('gulp');
-var path = require('path');
-var uglify = require('gulp-uglify');
-var bufferify = require('vinyl-buffer');
-var gutil = require('gulp-util');
-var browserify = require('browserify');
-var browserifyInc = require('browserify-incremental');
-var babelify = require('babelify');
-var reactify = require('reactify');
-var source = require('vinyl-source-stream');
-var reload = require('browser-sync').reload;
+import gulp from 'gulp';
+import path from 'path';
+import uglify from 'gulp-uglify';
+import bufferify from 'vinyl-buffer';
+import gutil from 'gulp-util';
+import browserify from 'browserify';
+import browserifyInc from 'browserify-incremental';
+import babelify from 'babelify';
+import source from 'vinyl-source-stream';
+import browserSync from 'browser-sync';
+import config from './config';
 
-var config = require('./config');
+const reload = browserSync.reload;
 
-var production = (process.env.NODE_ENV === 'production');
-var browserifyInstance = production ? browserify : browserifyInc;
+const production = (process.env.NODE_ENV === 'production');
+const browserifyInstance = production ? browserify : browserifyInc;
 
-var bundler = browserifyInstance({
+const bundler = browserifyInstance({
     cache: {},
-    transform: [babelify, reactify],
+    transform: [babelify],
     packageCache: {},
     debug: !production,
     fullPaths: !production

@@ -1,16 +1,12 @@
-'use strict';
+import path from 'path';
 
-var path = require('path');
+const rootPath = path.join('./');
+const appPath = path.join(rootPath, 'src');
 
-var rootPath = path.join('./');
-var appPath = path.join(rootPath, 'src');
-
-module.exports = {
-
+export default {
     paths: {
         root: rootPath,
         js: path.join(appPath, 'js'),
         assets: path.join(rootPath, 'public')
     }
-
 };
