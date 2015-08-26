@@ -11,6 +11,11 @@ export default class Chart {
     constructor(el, props) {
         this.el = el;
         this.props = props;
+
+        this.config = {
+            tickCount: 3,
+            tickFormat: formatters.vagueMoney
+        };
     }
 
     /**
@@ -33,6 +38,45 @@ export default class Chart {
             .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
         return svg;
+    }
+
+    /**
+     * Creates the Y "money" axis that is shared between all charts.
+     * @param  {function} scale A D3 scale to use for the axis.
+     * @return {function}       A D3 axis to call on the axis SVG elements.
+     */
+    createYAxis(scale) {
+        const axis = d3.svg.axis()
+            .scale(scale)
+            .orient('right')
+            .ticks(this.config.tickCount)
+            .tickFormat(this.config.tickFormat)
+            .innerTickSize(this.props.width)
+            .outerTickSize(0);
+
+        return axis;
+    }
+
+    /**
+     * Second axis function to override D3's default tick generation.
+     * @return {function} A D3 axis to call on the axis SVG elements.
+     */
+    overrideYAxis() {
+        return (g) => {
+            g.selectAll('text')
+                .attr('class', 'y-tick-label')
+                .attr('x', -this.props.margin.left)
+                .each('end', function(_, i) {
+                    const label = d3.select(this.parentNode);
+                    label.insert('rect', '.y-tick-label')
+                        .attr('class', 'y-tick-hack')
+                        .attr('x', -15)
+                        .attr('y', -10)
+                        .attr('width', 38)
+                        .attr('height', 20)
+                        .style('fill', '#f8faf5')
+                });
+        };
     }
 
     /**

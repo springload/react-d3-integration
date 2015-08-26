@@ -7,7 +7,7 @@ export default React.createClass({
     displayName: 'ProgressChart',
 
     propTypes: {
-        forecast: React.PropTypes.object.isRequired
+        account: React.PropTypes.object.isRequired
     },
 
     getInitialState() {
@@ -67,31 +67,26 @@ export default React.createClass({
     },
 
     getChartState() {
-        const forecast = this.props.forecast;
+        const account = this.props.account;
 
         // D3-friendly data format.
         const money = [
             {
                 id: 'low',
-                cssClass: 'money--low',
-                value: forecast.money
+                cssClass: 'forecast--low',
+                value: account.savingsSum
             },
             {
                 id: 'high',
-                cssClass: 'money--high',
-                value: forecast.moneyPotential
-            },
-            {
-                id: 'goal',
-                cssClass: 'money--goal',
-                value: forecast.moneyGoal
+                cssClass: 'forecast--high',
+                value: account.savingsSumPotential
             }
         ];
 
         // D3-friendly domain for the dataset.
         const domain = [
             0,
-            Math.max(forecast.moneyGoal, forecast.moneyPotential)
+            Math.max(account.savingsSum, account.savingsSumPotential)
         ];
 
         return {
