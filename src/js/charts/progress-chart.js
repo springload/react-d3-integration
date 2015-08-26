@@ -64,7 +64,7 @@ export default class ProgressChart extends Chart {
 
     // Draws the label on top of the bars.
     _drawLabel(scales, val) {
-        const numbers = formatters.vagueMoneyRange(val[0].value, val[1].value);
+        const numbers = formatters.preciseMoneyRange(val[0].value, val[1].value);
         const label = d3.select(this.el).selectAll('.bar-label');
 
         const range = label.selectAll('.money-range')
