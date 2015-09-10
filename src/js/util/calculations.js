@@ -1,5 +1,3 @@
-'use strict';
-
 import formulas from './financial-formulas.js';
 
 export default {

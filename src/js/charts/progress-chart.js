@@ -1,5 +1,3 @@
-'use strict';
-
 import d3 from 'd3';
 import Chart from './chart';
 import formatters from '../util/formatters';

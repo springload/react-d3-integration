@@ -1,5 +1,3 @@
-'use strict';
-
 // Taken from https://helloacm.com/common-javascript-functions-for-financial-calculations/.
 export default {
 
