@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ProgressChart from './ProgressChart';
 import SavingsChart from './SavingsChart';
 import formatters from '../util/formatters';
@@ -90,7 +91,7 @@ export default React.createClass({
 
     // Grabs the current rate from the slider, then updates the React state.
     changeRate() {
-        const rateSlider = React.findDOMNode(this.refs.rate);
+        const rateSlider = ReactDOM.findDOMNode(this.refs.rate);
         const rate = parseInt(rateSlider.value, 10);
         const account = this.state.account;
 
@@ -102,7 +103,7 @@ export default React.createClass({
 
     // Grabs the current age from the slider, then updates the React state.
     changeAge() {
-        const ageSlider = React.findDOMNode(this.refs.age);
+        const ageSlider = ReactDOM.findDOMNode(this.refs.age);
         const age = parseInt(ageSlider.value, 10);
 
         const rate= this.state.rate;

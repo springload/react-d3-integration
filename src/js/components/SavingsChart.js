@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import d3 from 'd3';
 
 import AreaChart from '../charts/area-chart.js';
@@ -36,7 +37,7 @@ export default React.createClass({
 
 
     createChart() {
-        const el = React.findDOMNode(this.refs.chart);
+        const el = ReactDOM.findDOMNode(this.refs.chart);
         const elWidth = el.offsetWidth;
 
         const margin = {top: 0, right: 0, bottom: 20, left: 20};

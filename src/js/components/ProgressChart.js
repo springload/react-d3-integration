@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ProgressChart from '../charts/progress-chart.js';
 
 export default React.createClass({
@@ -35,7 +36,7 @@ export default React.createClass({
     },
 
     createChart() {
-        const el = React.findDOMNode(this.refs.chart);
+        const el = ReactDOM.findDOMNode(this.refs.chart);
 
         if (this.state.chart) {
             this.state.chart.destroy();
