@@ -60,7 +60,7 @@ git push origin gh-pages
 git checkout master
 ```
 
-## Other tools
+## Case studies
 
 ### [Disc](http://hughsk.io/disc/)
 
@@ -81,3 +81,29 @@ sitespeed.io -u https://springload.github.io/react-d3-integration/
 ```
 
 This is an [example report](https://springload.github.io/react-d3-integration/sitespeed-result/springload.github.io/2015-07-27-12-38-44/) for this repository.
+
+### Upgrading to React `0.14`
+
+>[React 0.14.0-rc1 release notes](https://facebook.github.io/react/blog/2015/09/10/react-v0.14-rc1.html)
+
+There are now two packages:
+
+```sh
+npm install --save react@0.14.0-rc1
+npm install --save react-dom@0.14.0-rc1
+```
+
+After upgrading, the project compiles as usual, but there are deprecation warnings in the browser console. The warnings now use `console.error` instead of `console.warn` so that browsers show a full stack trace in the console:
+
+```
+Warning: React.render is deprecated. Please use ReactDOM.render from require('react-dom') instead. warning
+@ warning.js:45newFn
+@ deprecated.js:32[...]/src/js/site.js../components/app
+@ site.js:7s
+warning.js:45 Warning: React.findDOMNode is deprecated. Please use ReactDOM.findDOMNode from require('react-dom') instead.
+[...]
+```
+
+This project is quite small so the porting was quite easy. You can view the changes in the following commit: [ddda10d](https://github.com/springload/react-d3-integration/commit/ddda10d6d45d18941faffab40794fb9ac404e44f).
+
+Facebook created a codemod script for [jscodeshift](https://github.com/facebook/jscodeshift) to make this migration even more simple.
