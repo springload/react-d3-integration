@@ -3,7 +3,7 @@ react-d3-integration
 
 > An example on how to integrate D3 into React.
 
->[Demo site](https://springload.github.io/react-d3-integration/)
+>[Basic demo](https://springload.github.io/react-d3-integration/) – [Bigger demo in our `reusable-d3-charts` showcase](https://springload.github.io/reusable-d3-charts/)
 
 ## Why
 
