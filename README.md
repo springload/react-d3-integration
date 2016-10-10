@@ -49,15 +49,16 @@ git fetch --all
 git checkout master
 git pull
 git push origin master
-# Then push the new changes
-git checkout gh-pages
-git merge master
-export NODE_ENV=production; npm run build
-git add .
-git commit -m 'Release new version'
-git push origin gh-pages
-# And get back to master!
-git checkout master
+# Then build the project
+npm run build
+# Follow the instructions in the build command
+git commit -am "Save local changes"
+git checkout -B gh-pages
+git add -f build
+git commit -am "Rebuild website"
+git filter-branch -f --prune-empty --subdirectory-filter build
+git push -f origin gh-pages
+git checkout -
 ```
 
 ## Case studies

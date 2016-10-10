@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/springload/react-d3-integration/issues"
   },
-  "homepage": "https://github.com/springload/react-d3-integration",
+  "homepage": "https://springload.github.io/react-d3-integration",
   "engines": {
     "node": "0.12"
   },
