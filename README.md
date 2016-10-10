@@ -1,4 +1,4 @@
-react-d3-integration
+[react-d3-integration](https://springload.github.io/react-d3-integration/) [![Build Status](https://travis-ci.org/springload/react-d3-integration.svg?branch=master)](https://travis-ci.org/springload/react-d3-integration)
 ==============
 
 > An example on how to integrate D3 into React.
