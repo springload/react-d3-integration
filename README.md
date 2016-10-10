@@ -24,6 +24,7 @@ Other approaches worth having a look at:
 ```sh
 git clone git@github.com:springload/react-d3-integration.git
 cd react-d3-integration
+nvm install
 npm install
 ```
 
@@ -32,6 +33,8 @@ npm install
 > Everything mentioned in the installation process should already be done.
 
 ```sh
+# Use the right node version
+nvm use
 # Start the server and the development tools.
 npm run start
 # Builds frontend assets for production.

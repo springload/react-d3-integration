@@ -12,7 +12,7 @@
   },
   "homepage": "https://springload.github.io/react-d3-integration",
   "engines": {
-    "node": "0.12"
+    "node": "^6.7.0"
   },
   "devDependencies": {
     "react-scripts": "0.6.1"
