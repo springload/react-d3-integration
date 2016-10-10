@@ -4,7 +4,7 @@ export default {
 
     computeSavings(rate, account) {
         var yearlySavings = [];
-        const potentialRate = parseInt(rate) + 1;
+        const potentialRate = parseInt(rate, 10) + 1;
 
         // calculate savings up to retirment
         const yearlyContribution = account.monthlyContribution * 12;

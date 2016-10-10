@@ -1,17 +1,8 @@
 {
   "name": "react-d3-integration",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "An example on how to integrate D3 into React",
   "private": true,
-  "main": "src/index.html",
-  "author": "Springload",
-  "license": "ISC",
-  "scripts": {
-    "test": "npm run lint",
-    "lint": "eslint . && jscs .",
-    "start": "gulp watch",
-    "build": "gulp build"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/springload/react-d3-integration.git"
@@ -23,21 +14,17 @@
   "engines": {
     "node": "0.12"
   },
+  "devDependencies": {
+    "react-scripts": "0.6.1"
+  },
   "dependencies": {
     "d3": "^3.5.5",
-    "react": "^0.14.0-rc1",
-    "react-dom": "^0.14.0-rc1"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
-  "devDependencies": {
-    "babel-core": "^5.8.12",
-    "babelify": "^6.0.2",
-    "browser-sync": "^2.7.4",
-    "browserify": "^11.0.0",
-    "browserify-incremental": "^3.0.0",
-    "gulp": "^3.9.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom"
   }
 }

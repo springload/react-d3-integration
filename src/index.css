@@ -1,0 +1,102 @@
+body {
+    background-color: #B2DBBF;
+}
+
+.mb {
+   margin-bottom: 1em;
+}
+
+.card {
+    background-color: #f8faf5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 15px;
+}
+
+.chart {
+    user-select: none;
+}
+
+.chart text {
+    stroke-width: 0;
+    font-size: 12px;
+    color: #778179;
+    fill: #778179;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke-width: 0;
+}
+
+/* bar chart */
+.progress-chart .chart {
+    border-radius: 3px;
+}
+
+
+/* Savings chart */
+.axis.mark path,
+.axis.mark line {
+    stroke-width: 1.5;
+    stroke: #646d66;
+    stroke-opacity: .3;
+    shape-rendering: crispEdges;
+}
+
+.y-axis line {
+    stroke: #646d66;
+    stroke-dasharray: 2,6;
+    stroke-width: 1.5;
+    stroke-opacity: .6; }
+
+.y-tick-label,
+.y-tick-hack {
+    display: none;
+}
+
+.tick:first-of-type .y-tick-label,
+.tick:last-of-type .y-tick-label,
+.tick:last-of-type .y-tick-hack {
+    display: block;
+}
+.tick:first-of-type line {
+    display: none;
+}
+
+.savings-chart .line {
+    fill: none;
+    stroke-dasharray: 2, 6;
+    stroke-linecap: square;
+    stroke-width: 0;
+    stroke: black;
+}
+
+.savings-chart .x-axis {
+    display: none;
+}
+
+/**
+ * Chart colors
+ */
+.forecast--low,
+.forecast--high {
+    -webkit-transition: fill .3s ease;
+    transition: fill .3s ease;
+}
+
+.forecast--high {
+    opacity: 1;
+}
+
+.forecast--low {
+    fill: #6AC1E6;
+}
+.forecast--high {
+    fill: #419BC1;
+}
